@@ -1,12 +1,11 @@
 #include <iostream>
 using namespace std;
 
-// Custom swap (std::swap ki jagah)
+
 inline void swapVals(int &a, int &b) {
     int t = a; a = b; b = t;
 }
 
-// Selection Sort
 void selectionSort(int arr[], int n) {
     for (int i = 0; i < n - 1; i++) {
         int minIdx = i;
@@ -17,7 +16,7 @@ void selectionSort(int arr[], int n) {
     }
 }
 
-// Merge (helper for merge sort)
+
 void merge(int arr[], int left, int mid, int right) {
     int n1 = mid - left + 1;
     int n2 = right - mid;
@@ -40,7 +39,7 @@ void merge(int arr[], int left, int mid, int right) {
     delete[] R;
 }
 
-// Merge Sort
+
 void mergeSort(int arr[], int left, int right) {
     if (left < right) {
         int mid = left + (right - left) / 2;
@@ -50,7 +49,7 @@ void mergeSort(int arr[], int left, int right) {
     }
 }
 
-// Linear Search
+
 int linearSearch(int arr[], int n, int key) {
     for (int i = 0; i < n; i++) {
         if (arr[i] == key) return i;
@@ -58,7 +57,7 @@ int linearSearch(int arr[], int n, int key) {
     return -1;
 }
 
-// Binary Search (array must be sorted)
+
 int binarySearch(int arr[], int n, int key) {
     int low = 0, high = n - 1;
     while (low <= high) {
@@ -70,7 +69,7 @@ int binarySearch(int arr[], int n, int key) {
     return -1;
 }
 
-// Print Array
+
 void printArray(int arr[], int n) {
     for (int i = 0; i < n; i++) cout << arr[i] << " ";
     cout << "\n";
@@ -153,4 +152,5 @@ int main() {
 
     delete[] arr;
     return 0;
+
 }
